@@ -1,8 +1,5 @@
-# Witch
-Lightweight performance and debugging tools
-
 This site contains supporting experimental data for WitchTools.
-witch_data.xlsx is an excel spread sheet that contains the following sheets:
+witch_data.xlsx is a spread sheet that contains the following sheets:
 
 1. Accuracy: This sheet quantifies the overall redundancies in SPEC CPU2006 benchmarks and compares the redundancy metric of each of exhaustive tools vs. sampling tools. The sheet contains benchmark names, inputs, and the measured redundancies by both exhaustive tools (DeadSpy, RedSpy, LoadSpy) and their sampling counterparts (DeadCraft, SilentCraft, and LoadCraft). The sampling tools have the redundancy metrics collected at five different sampling rates 500K, 1M, 5M, 10M, and 100M. 
 
