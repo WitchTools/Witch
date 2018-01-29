@@ -1,0 +1,23 @@
+1. Install the custom Linux version from https://github.com/WitchTools/linux.
+2. Install hpctoolkit-externals from https://github.com/WitchTools/hpctoolkit-externals.
+3. Install the custom libmonitor from https://github.com/WitchTools/libmonitor.
+4. Install HPCToolkit with Witch extensions from https://github.com/WitchTools/hpctoolkit pointing to the installations of hpctoolkit-externals and libmonitor from step \#2 and \#3.
+5. Install pre-built hpcviewer binary from http://hpctoolkit.org/download/hpcviewer/ matching you platform.
+
+To run dead-write detection:
+1. hpcrun -o <measurement_directory> -e WP_DEADSPY -e MEM_UOPS_RETIRED:ALL_STORES@<sampling rate> <./your_executable> [your_args]
+2. hpcstruct <your_executable>
+3. hpcprof -S <your_executable.hpcstruct> -o <database_directory> <measurement_directory>
+4. Open <database_directory> with hpcviewer java GUI. 
+
+To run silent-store detection:
+1. hpcrun -o <measurement_directory> -e WP_REDSPY -e MEM_UOPS_RETIRED:ALL_STORES@<sampling rate> <./your_executable> [your_args]
+2. hpcstruct <your_executable>
+3. hpcprof -S <your_executable.hpcstruct> -o <database_directory> <measurement_directory>
+4. Open <database_directory> with hpcviewer java GUI. 
+
+To run silent-load detection:
+1. hpcrun -o <measurement_directory> -e WP_LOADSPY -e MEM_UOPS_RETIRED:ALL_LOADS@<sampling rate> <./your_executable> [your_args]
+2. hpcstruct <your_executable>
+3. hpcprof -S <your_executable.hpcstruct> -o <database_directory> <measurement_directory>
+4. Open <database_directory> with hpcviewer java GUI. 
