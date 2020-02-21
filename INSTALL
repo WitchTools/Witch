@@ -1,4 +1,7 @@
-1. Install the custom Linux version from https://github.com/WitchTools/linux.
+1. Install the custom Linux version from https://github.com/WitchTools/linux. ** As the fast address replacement for debug registers is upstreamed to the Linux kernel, one can use any plain Linux kernel beyond 5.0 to run Witch. Make sure you also install Linux header files from the source tree.
+An example:
+cd /usr/src/linux-5.XX/
+sudo make headers_install INSTALL_HDR_PATH=/usr/
 2. Install hpctoolkit-externals from https://github.com/WitchTools/hpctoolkit-externals.
 3. Install the custom libmonitor from https://github.com/WitchTools/libmonitor.
 4. Install HPCToolkit with Witch extensions from https://github.com/WitchTools/hpctoolkit pointing to the installations of hpctoolkit-externals and libmonitor from step \#2 and \#3.
